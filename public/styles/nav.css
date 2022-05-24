@@ -1,0 +1,27 @@
+nav {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  height: 120px;
+  font-family: 'Source Sans Pro', sans-serif;
+  z-index: 1;
+ }
+
+.outerDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  margin: 0 1.5em;
+}
+
+span {
+  text-align: center;
+}
+
+#logo {
+  display: flex;
+  align-self: flex-end;
+  font-family: 'Bungee', cursive, sans-serif;
+  padding: 0.5em 0;
+  font-size: 150%;
+}
