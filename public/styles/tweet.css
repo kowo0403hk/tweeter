@@ -3,6 +3,7 @@ article.tweet {
   flex-direction: column;
   border: 5px solid black;
   padding: 0.5em;
+  margin: 1.5em 0;
 }
 
 article.tweet:hover {
@@ -16,20 +17,18 @@ article.tweet header {
   padding: 0 1em;
 }
 
-article.tweet span.avatar-tweet {
+article.tweet header div.avatarHead {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-article.tweet .avatarImg {
-  width: 75px;
-  height: 75px;
-  object-fit: contain;
+article.tweet header div.avatarHead span {
+  margin-left: 0.5em;
 }
 
-article.tweet span.userHandler {
+article.tweet header div.userHandler {
   color: rgb(200, 202, 227);
 }
 
@@ -50,16 +49,15 @@ article.tweet footer {
   padding: 0.5em 1em;
 }
 
-article.tweet footer span.dateCreated {
+article.tweet footer div.dateCreated {
   font-size: 0.7em;
   font-weight: bold;
 }
 
-article.tweet .fa-solid {
+article.tweet footer .fa-solid {
   color: #4056A1;
-  object-fit: contain;
 }
 
-article.tweet .fa-solid:hover {
+article.tweet footer .fa-solid:hover {
   color: red;
 }
