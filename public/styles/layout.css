@@ -27,10 +27,10 @@ body {
  .container {
   display: flex;
   flex-direction: column;
+  /* align-items: flex-start; */
   justify-content: center;
   font-family: 'Source Sans Pro', sans-serif;
   background-color: #f4f1ec;
-  position: relative;
   margin: 0 5%;
  }
 

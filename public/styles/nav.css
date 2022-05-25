@@ -4,6 +4,9 @@ nav {
   height: 120px;
   font-family: 'Source Sans Pro', sans-serif;
   z-index: 1;
+  position: fixed;
+  width: 100%;
+  top: 0;
  }
 
 .outerDiv {
