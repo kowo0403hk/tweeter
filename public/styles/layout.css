@@ -26,9 +26,14 @@ body {
 
  .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   font-family: 'Source Sans Pro', sans-serif;
   background-color: #f4f1ec;
   position: relative;
   margin: 0 5%;
+ }
+
+ .container section {
+   margin: 1em;
  }

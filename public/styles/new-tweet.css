@@ -1,14 +1,15 @@
-.new-tweet {
-  width: 100%;
-  /* display: flex;
-  flex-direction: column; */
+
+
+.new-tweet form {
+  display: flex;
+  flex-direction: column;
 }
 
-label {
+.new-tweet label {
   font-weight: bold;
 }
 
-div {
+.new-tweet div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -22,10 +23,11 @@ div {
   border: none;
   border-bottom: 5px solid;
   height: 1.5em;
-  width: 100%;
   resize: none;
   padding-bottom: 0.5em; 
+  margin-bottom: 0.5em;
 }
+
 
 output {
   font-weight: bold;

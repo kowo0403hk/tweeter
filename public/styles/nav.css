@@ -14,9 +14,14 @@ nav {
   margin: 0 1.5em;
 }
 
+nav .fa-solid {
+  color: red;
+}
+
 span {
   text-align: center;
 }
+
 
 #logo {
   display: flex;
