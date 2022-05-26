@@ -19,6 +19,15 @@ nav {
 
 nav .fa-solid {
   color: red;
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+  0% {transform: translateY(0);}
+  50% {transform: translateY(5px);}
+  100% {transform: translateY(-0px);}
 }
 
 span {
@@ -32,4 +41,8 @@ span {
   font-family: 'Bungee', cursive, sans-serif;
   padding: 0.5em 0;
   font-size: 150%;
+}
+
+.createNew:hover {
+  cursor: pointer;
 }

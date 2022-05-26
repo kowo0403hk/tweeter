@@ -60,4 +60,5 @@ article.tweet footer .fa-solid {
 
 article.tweet footer .fa-solid:hover {
   color: red;
+  cursor: pointer;
 }

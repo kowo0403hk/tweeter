@@ -1,4 +1,6 @@
-
+.new-tweet {
+  display: none;
+}
 
 .new-tweet form {
   display: flex;
@@ -41,3 +43,7 @@ button {
   padding: 0 0.5em;
   border: none;
 }
+
+ button:active {
+   transform: translateY(1px);
+ }
