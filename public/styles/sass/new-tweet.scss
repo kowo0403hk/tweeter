@@ -1,0 +1,51 @@
+@import '_variables';
+
+section.new-tweet {
+  display: none;
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-weight: $font-weight;
+    }
+
+    #tweet-text {
+      outline: none;
+      overflow: hidden;
+      font-weight: $font-weight;
+      background-color: $background-color;
+      border: none;
+      border-bottom: $border-bottom;
+      height: 2rem;
+      resize: none;
+      padding-bottom: $padding-space;
+      margin-bottom: $padding-space;
+    }
+
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      button {
+        background-color: $navbackground;
+        color: $navcolor;
+        font-family: $font-nav;
+        padding: 0 $padding-space;
+        border: none;
+
+        &:active {
+          transform: translateY($buttonactive)
+        }
+      }
+
+      output {
+        font-weight: $font-weight;
+        font-family: $font-nav;
+      }
+
+    }
+  }  
+}

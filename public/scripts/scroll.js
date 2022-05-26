@@ -15,7 +15,7 @@ $(() => {
     }
   });
 
-  $('.backToTop').on('click', function() {
+  $('.bttButton').on('click', function() {
     window.scrollTo({
       top: 0
     })

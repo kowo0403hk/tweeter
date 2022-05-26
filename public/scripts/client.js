@@ -3,9 +3,6 @@
 ////////////////////////////////////////////////////////////////////////
 
 $(() => {  
-  $('.wordExc').hide();
-  $('.wordNone').hide();
-
   $('.createNew').on('click', function() {
     $('.new-tweet').toggle('slow');
     $('#tweet-text').focus();
@@ -13,38 +10,39 @@ $(() => {
 
   $('.new-tweet-form').on('submit', (event) => {
     event.preventDefault();
-    const $form = $('.new-tweet-form');
-    const serializedWord = $form.serialize();
+    const serializedWord = $('.new-tweet-form').serialize();
 
     if (serializedWord.length > 145) {
       $('.wordExc').slideDown();
     } else if (serializedWord.length <= 5) {
       $('.wordNone').slideDown();
     } else {
-      $('#tweet-text').val('');
-      $('.counter').val('140');
-      $('.wordExc').hide();
-      $('.wordNone').hide();
+      clearTextArea();
       $.ajax({
         type: 'POST',
         url: 'http://localhost:8080/tweets',
         data: serializedWord,
-        success: function () {
-          $('#tweets-container').empty();
-          loadTweets();
+        success: function() {
+          loadOneTweet();
         }
-      })
+      });
     }
   });
   loadTweets();
 });
 
 
-
-
 ////////////////////////////////////////////////////////////////////////
-// tweets rendering functions
+// tweets rendering and helper functions
 ////////////////////////////////////////////////////////////////////////
+
+const clearTextArea = function () {
+  $('#tweet-text').val('');
+  $('.counter').val('140');
+  $('.wordExc').hide();
+  $('.wordNone').hide();
+}
+
 const escapeStr = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
@@ -59,10 +57,7 @@ const renderTweets = function(tweets) {
   })
 };
 
-
 const createTweetElement = function(tweet) {
-
-
   const user = tweet.user;
   const content = tweet.content;
   const createdAt = timeago.format(tweet["created_at"]);
@@ -105,3 +100,14 @@ const loadTweets = function() {
     }
   })
 };
+
+const loadOneTweet = function() {
+  $.ajax({
+    url: 'http://localhost:8080/tweets',
+    dataType: 'json',
+    success: function(data) {
+      const latestTweet = [data[(data.length - 1)]];
+      renderTweets(latestTweet);
+    }
+  })
+}

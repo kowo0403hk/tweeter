@@ -1,0 +1,12 @@
+@import '_variables';
+
+header.page-head {
+  height: $headerheight;
+  width: $headerwidth;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: $headerbackground;
+  background-image: $headerbackgroundimg;
+}

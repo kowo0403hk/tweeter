@@ -1,0 +1,68 @@
+@import '_variables';
+/*
+ * Global layout stuff
+ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// actual project layout
+
+body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+}
+
+.container {
+  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: $font-head;
+  margin: 0 5%;
+
+  section {
+    margin: 0.5rem;
+
+    .error-message {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  div.wordExc, div.wordNone {
+    display: none;
+    font-weight: $font-weight;
+    color: $color;
+  } 
+
+  .fa-circle-exclamation {
+    margin-right: 0.5rem;
+  }
+
+  .bttButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    position: fixed;
+    bottom: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: $color;
+
+    &:hover {
+      cursor: $pointer;
+    }
+
+    .backToTop {
+      color: white;
+      align-items: center;
+    }
+  }
+}

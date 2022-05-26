@@ -1,0 +1,46 @@
+nav {
+  background-color: #4056A1;
+  color: #FFF;
+  height: 120px;
+  font-family: "Source Sans Pro", sans-serif;
+  z-index: 1000;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+nav .outerDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  margin: 0 1.5em;
+}
+nav .outerDiv span {
+  text-align: center;
+}
+nav .outerDiv span .createNew:hover {
+  cursor: pointer;
+}
+nav .outerDiv span .fa-solid {
+  color: red;
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+nav .outerDiv span #logo {
+  align-self: flex-end;
+  font-family: "Bungee", cursive, sans-serif;
+  font-size: 150%;
+  padding: 0.5rem 0;
+}

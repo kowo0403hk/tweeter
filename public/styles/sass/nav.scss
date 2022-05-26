@@ -1,0 +1,48 @@
+@import '_variables';
+
+nav {
+  background-color: $navbackground;
+  color: $navcolor;
+  height: $navheight;
+  font-family: $font-main;
+  z-index: 1000;
+  width: $navwidth;
+  position: fixed;
+  top: 0;
+
+  .outerDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $navheight;
+    margin: 0 1.5em;
+
+    span {
+      text-align: center;
+
+      .createNew:hover {
+        cursor: $pointer;
+      }
+
+      .fa-solid {
+        color: $color;
+        animation-name: floating;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes floating {
+        0% {transform: translateY(0);}
+        50% {transform: translateY(5px);}
+        100% {transform: translateY(-0px);}
+      }
+
+      #logo {
+        align-self: flex-end;
+        font-family: $font-nav;
+        font-size: $nav-font-size;
+        padding: 0.5rem 0;
+      }
+    }
+  }
+}
