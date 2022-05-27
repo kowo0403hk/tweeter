@@ -22,6 +22,7 @@ This repository is the starter code for the project: Students will fork and clon
 - Newly typed tweet will appear on the top of other tweets.
 - Error messages will slide out if the user tries to their input.
 - A back-to-top button will apprear when the user scrolls down the page. It also provides the functionality of sending the user back to the top of the page with the new tweet-form box toggled on and focused.
+- The CSS files are written by SASS format. 
 
 
 ## Dependencies
