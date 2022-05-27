@@ -3,10 +3,12 @@
 ////////////////////////////////////////////////////////////////////////
 $(function() {
   $('#tweet-text').on('input', function() {
+    clearErrorMsg();
     const wordLimit = 140;
-    let wordInput = $(this).val();
-    let wordLeft = wordLimit - wordInput.length;
+    const wordInput = $(this).val();
+    const wordLeft = wordLimit - wordInput.length;
 
+    // to update the word count on webpage
     $('.counter').html(wordLeft);
 
     if (wordLeft < 0) {
@@ -16,3 +18,12 @@ $(function() {
     }
   });
 });
+
+////////////////////////////////////////////////////////////////////////
+// helper function
+////////////////////////////////////////////////////////////////////////
+
+const clearErrorMsg = function() {
+  $('.wordExc').hide('slow');
+  $('.wordNone').hide('slow');
+};

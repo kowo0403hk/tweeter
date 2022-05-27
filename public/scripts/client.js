@@ -1,8 +1,9 @@
 ////////////////////////////////////////////////////////////////////////
 // document.ready()
 ////////////////////////////////////////////////////////////////////////
-
 $(() => {
+  loadTweets();
+
   // toggle button for new tweet
   $('.createNew').on('click', function() {
     $('.new-tweet').toggle('slow');
@@ -30,19 +31,16 @@ $(() => {
       });
     }
   });
-  loadTweets();
 });
 
 
 ////////////////////////////////////////////////////////////////////////
-// tweets rendering and helper functions
+// helper functions
 ////////////////////////////////////////////////////////////////////////
 
 const clearTextArea = function() {
   $('#tweet-text').val('');
-  $('.counter').val('140');
-  $('.wordExc').hide();
-  $('.wordNone').hide();
+  $('.counter').html('140');
 };
 
 const escapeStr = function(str) {
@@ -52,12 +50,9 @@ const escapeStr = function(str) {
 };
 
 
-const renderTweets = function(tweets) {
-  tweets.forEach(function(tweet) {
-    let $tweet = createTweetElement(tweet);
-    return $('#tweets-container').prepend($tweet);
-  })
-};
+////////////////////////////////////////////////////////////////////////
+// tweet rendering functions
+////////////////////////////////////////////////////////////////////////
 
 const createTweetElement = function(tweet) {
   const user = tweet.user;
@@ -93,6 +88,13 @@ const createTweetElement = function(tweet) {
   return $tweet;
 };
 
+const renderTweets = function(tweets) {
+  tweets.forEach(function(tweet) {
+    let $tweet = createTweetElement(tweet);
+    return $('#tweets-container').prepend($tweet);
+  })
+};
+
 const loadTweets = function() {
   $.ajax({
     url: 'http://localhost:8080/tweets',
@@ -108,7 +110,7 @@ const loadOneTweet = function() {
     url: 'http://localhost:8080/tweets',
     dataType: 'json',
     success: function(data) {
-      const latestTweet = [data[(data.length - 1)]];
+      const latestTweet = [data.pop()];
       renderTweets(latestTweet);
     }
   });

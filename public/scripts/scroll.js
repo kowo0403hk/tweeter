@@ -4,6 +4,7 @@
 $(() => {
   $('.bttButton').hide();
 
+  // navbar's appearance based on the below code
   $(window).on('scroll', function() {
     let scrollTop = $(window).scrollTop();
     if (scrollTop > 0) {
@@ -15,6 +16,7 @@ $(() => {
     }
   });
 
+  // back-to-top button activation
   $('.bttButton').on('click', function() {
     window.scrollTo({
       top: 0
