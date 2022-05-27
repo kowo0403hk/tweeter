@@ -5,27 +5,36 @@ article.tweet {
   padding: 0.5rem;
   margin: 1.5rem 0;
 }
+
 article.tweet:hover {
-  box-shadow: 5px 5px rgb(200, 200, 220);
+  box-shadow: 5px 5px rgb(200, 200, 220)
 }
+
 article.tweet header {
+  overflow: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
 }
-article.tweet header .avatarHead {
+
+article.tweet header div.avatarHead {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-article.tweet header .avatarHead span {
+
+article.tweet header div.avatarHead span {
   margin-left: 0.5rem;
 }
-article.tweet header .userHandler {
+
+article.tweet header div.userHandler {
+  overflow: clip;
+  word-wrap: break-word;
   color: rgb(200, 202, 227);
 }
+
 article.tweet div.tweet {
   font-weight: bold;
   padding: 2rem 1rem;
@@ -33,20 +42,24 @@ article.tweet div.tweet {
   margin: none;
   word-wrap: break-word;
 }
+
 article.tweet footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
 }
-article.tweet footer .dateCreated {
+
+article.tweet footer div.dateCreated {
   font-size: 1rem;
   font-weight: bold;
 }
-article.tweet footer .fasolid {
+
+article.tweet footer .fa-solid {
   color: #4056A1;
 }
-article.tweet footer .fasolid:hover {
+
+article.tweet footer .fa-solid:hover {
   color: red;
   cursor: pointer;
 }

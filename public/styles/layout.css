@@ -66,3 +66,36 @@ body {
   color: white;
   align-items: center;
 }
+
+@media screen and (min-width: 1024px) {
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    padding-top: 240px;
+    color: #545149;
+    background-color: #f4f1ec;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  header.page-head {
+    height: 350px;
+    margin-left: 2rem;
+    max-width: 25%;
+  }
+  
+  
+  main {
+    padding-top: 0;
+    width: 50%;
+    top: 120px;
+  }
+}
