@@ -5,6 +5,24 @@ Tweeter is a simple, single-page Twitter clone.
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
 
 ## Final Product
+!['tweeter-desktop-view'](https://github.com/kowo0403hk/tweeter/blob/master/docs/tweeter-desktop.png?raw=true)
+!['tweeter-small-screen-view'](https://github.com/kowo0403hk/tweeter/blob/master/docs/tweeter-small-screen.png?raw=true)
+!['tweeter-new-tweet-box'](https://github.com/kowo0403hk/tweeter/blob/master/docs/tweeter-new-tweet-box.png?raw=true)!['tweeter-toggle-and-visual-effects'](https://github.com/kowo0403hk/tweeter/blob/master/docs/tweeter-toggle-button-and-visual-effects.png?raw=true)
+!['tweeter-errorMsg-empty-tweet'](https://github.com/kowo0403hk/tweeter/blob/master/docs/tweeter-errorMsg-empty-tweet.png?raw=true)
+!['tweeter-errorMsg-word-exceeded'](https://github.com/kowo0403hk/tweeter/blob/master/docs/tweeter-errorMsg-word-exceeded.png?raw=true)
+
+
+## Functionality 
+- The web application provides the user a single page app layout.
+- The web application uses media queries css style and is responsive to different screen sizes.
+- The new tweet-form box will only appear/disappear (with animation) when the user clicks on the "Write a new tweet" button.
+- The new tweet-form box is auto-focused once toggled on.
+- Word count of the tweet is dynamically updated.
+- Appropriate error messages will slide in when the user submits a blank tweet or a tweet exceeds the word limit.
+- Newly typed tweet will appear on the top of other tweets.
+- Error messages will slide out if the user tries to their input.
+- A back-to-top button will apprear when the user scrolls down the page. It also provides the functionality of sending the user back to the top of the page with the new tweet-form box toggled on and focused.
+
 
 ## Dependencies
 - Express
