@@ -2,12 +2,14 @@
 // document.ready()
 ////////////////////////////////////////////////////////////////////////
 
-$(() => {  
+$(() => {
+  // toggle button for new tweet
   $('.createNew').on('click', function() {
     $('.new-tweet').toggle('slow');
     $('#tweet-text').focus();
   });
 
+  // form submission
   $('.new-tweet-form').on('submit', (event) => {
     event.preventDefault();
     const serializedWord = $('.new-tweet-form').serialize();
@@ -36,14 +38,14 @@ $(() => {
 // tweets rendering and helper functions
 ////////////////////////////////////////////////////////////////////////
 
-const clearTextArea = function () {
+const clearTextArea = function() {
   $('#tweet-text').val('');
   $('.counter').val('140');
   $('.wordExc').hide();
   $('.wordNone').hide();
-}
+};
 
-const escapeStr = function (str) {
+const escapeStr = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -89,7 +91,7 @@ const createTweetElement = function(tweet) {
   `);
 
   return $tweet;
-}
+};
 
 const loadTweets = function() {
   $.ajax({
@@ -98,7 +100,7 @@ const loadTweets = function() {
     success: function(data) {
       renderTweets(data);
     }
-  })
+  });
 };
 
 const loadOneTweet = function() {
@@ -109,5 +111,5 @@ const loadOneTweet = function() {
       const latestTweet = [data[(data.length - 1)]];
       renderTweets(latestTweet);
     }
-  })
-}
+  });
+};

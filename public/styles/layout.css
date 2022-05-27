@@ -68,13 +68,7 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
-  html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
+
   body {
     padding-top: 240px;
     color: #545149;
